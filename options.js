@@ -39,9 +39,11 @@ function restore_options(){
         document.getElementById('words').value = items.selection;
         if(items.selection === "custom"){
             document.getElementById('text').disabled = false;
+            document.getElementById('text').style.display = "block";
             document.getElementById('text').value = items.word_list.join(', ');
         } else {
             document.getElementById('text').disabled = true;
+            document.getElementById('text').style.display = "none";
         }
     });
 }
@@ -52,7 +54,9 @@ document.getElementById('save').addEventListener('click',
 document.getElementById('words').addEventListener('change', function() {
         if(document.getElementById('words').value === "custom"){
             document.getElementById('text').disabled = false;
+            document.getElementById('text').style.display = "block";
         } else {
             document.getElementById('text').disabled = true;
+            document.getElementById('text').style.display = "none";
         }
 }); 
